@@ -1,0 +1,75 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 6em;
+  pointer-events: none;
+  margin-top: 1em;
+}
+
+.App-text-logo {
+  font-size: xx-large;
+  margin-top: 0em;
+}
+
+.App-header {
+  background-image: url(../assets/background3.jpg);
+  background-color: rgb(40, 44, 52);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: large;
+  color: white;
+  background-size: cover;
+}
+
+.App-form {
+  display: flex;
+  background-color: rgba(14, 38, 84, 0.502);
+  flex-direction: column;
+  align-items: center;
+  width: 25em;
+  padding: 1em;
+}
+.App-form-group {
+  width: 80%;
+}
+.App-form-groupC {
+  width: 100%;
+}
+
+.App-form-labelC {
+  font-size: large;
+}
+
+.App-form-labelL {
+  margin-bottom: 0.1em !important;
+}
+
+.App-form-control {
+  border-radius: 15em;
+  height: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+.App-button-login {
+  margin-top: 1em;
+  height: 3em;
+  width: 60%;
+}
+
+.App-button-link {
+  margin-top: 1em;
+  height: 3em;
+  width: 60%;
+}
+
+.App-text-button {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+.App-link {
+  color: #61dafb;
+}
