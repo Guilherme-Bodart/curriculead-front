@@ -49,10 +49,18 @@ class Login extends Component {
             >
               <p className="App-text-button">Entrar</p>
             </Button>
-            <Button href="http://localhost:3000/cadastro" variant="success" className="App-button-login">
+            <Button
+              href="http://localhost:3000/cadastro"
+              variant="success"
+              className="App-button-login"
+            >
               <p className="App-text-button">Crie sua conta aqui</p>
             </Button>
-            <Button href="http://localhost:3000/recuperar" variant="link" className="App-button-link">
+            <Button
+              href="http://localhost:3000/recuperar"
+              variant="link"
+              className="App-button-link"
+            >
               <p className="App-text-button">Esqueceu sua senha?</p>
             </Button>
           </Form>

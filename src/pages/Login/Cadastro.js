@@ -40,7 +40,7 @@ class Cadastro extends Component {
               </Row>
               <Row>
                 <Col>
-                  <Form.Group >
+                  <Form.Group>
                     <Form.Label className="App-form-labelC">
                       Endereço
                     </Form.Label>
@@ -152,7 +152,11 @@ class Cadastro extends Component {
             >
               <p className="App-text-button">Criar conta</p>
             </Button>
-            <Button href="http://localhost:3000/login" variant="success" className="App-button-login">
+            <Button
+              href="http://localhost:3000/login"
+              variant="success"
+              className="App-button-login"
+            >
               <p className="App-text-button">Já tenho uma conta</p>
             </Button>
           </Form>
