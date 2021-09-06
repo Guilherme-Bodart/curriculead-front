@@ -9,6 +9,7 @@ import MudarSenha from "./pages/Login/MudarSenha";
 import Home from "./pages/Main/Home";
 
 import "./styles/App.css";
+import MeuCurriculo from "./views/Logado/MeuCurriculo";
 class App extends Component {
   render(props) {
     return (
@@ -19,14 +20,14 @@ class App extends Component {
         <Route path="/cadastro">
           <Cadastro />
         </Route>
-        <Route path="/recuperar">
+        <Route exact path="/recuperar">
           <Recuperar />
         </Route>
-        <Route path="/mudarsenha">
+        <Route path="/recuperar/:token">
           <MudarSenha />
         </Route>
         <Route path="/home">
-          <Home/>
+          <Home />
         </Route>
         <Route>
           <Redirect to="/home">

@@ -1,32 +1,53 @@
-import { LOGIN_USUARIO, LOGOUT_USUARIO } from '../../actions/actionsTypes'
+import { LOGIN_USUARIO, LOGOUT_USUARIO } from "../../actions/actionTypes";
 
 const initialState = {
-    email: '',
-    nome: '',
-    token: '',
-    _id: '',
-    permissao: '',
-    logado: false,
-}
+  email: "",
+  nome: "",
+  dataNascimento: "",
+  telefone: "",
+  estado: "",
+  cidade: "",
+  bairro: "",
+  rua: "",
+  complemento: "",
+  linkedin: "",
+  genero: "",
+  curriculo: "",
+  token: "",
+  _id: "",
+  logado: false,
+};
 
 const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case LOGIN_USUARIO:
+      let token = action.payload.token;
+      let usuario = action.payload.usuario;
+      return {
+        ...state,
+        token,
+        email: usuario.email,
+        nome: usuario.nome,
+        dataNascimento: usuario.dataNascimento,
+        telefone: usuario.telefone,
+        estado: usuario.estado,
+        cidade: usuario.cidade,
+        bairro: usuario.bairro,
+        rua: usuario.rua,
+        complemento: usuario.complemento,
+        linkedin: usuario.linkedin,
+        genero: usuario.sexo,
+        curriculo: usuario.curriculo,
+        _id: usuario._id,
+        logado: true,
+      };
 
-switch (action.type) {
+    case LOGOUT_USUARIO:
+      return initialState;
 
-   case LOGIN_USUARIO:
-        let { email, _id, permissao } = action.payload.usuario;
-        let token = action.payload.token
-        let logado = true
-        return {
-            ...state, email, nome: action.payload.usuario.pessoa.nome, token, _id, permissao, logado
-        }
+    default:
+      return state;
+  }
+};
 
-   case LOGOUT_USUARIO:
-       return initialState
-
-   default:
-       return state
-}
-}
-
-export default reducer
+export default reducer;
